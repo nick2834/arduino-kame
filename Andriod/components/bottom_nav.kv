@@ -1,0 +1,46 @@
+<BottomNav>:
+    MDBottomNavigation:
+        #panel_color: "#eeeaea"
+        selected_color_background: "#0052d9"
+        text_color_active: "#0052d9"
+
+        MDBottomNavigationItem:
+            name: 'Home'
+            icon: 'home'
+            on_tab_press: root.on_tab_press(*args)
+
+            ScrollView:
+                size_hint_x: None
+                bar_width: 0
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    adaptive_height: True
+                    id: timeline
+                    MDLabel:
+                        text: 'chat'
+                        halign: 'center'
+                    MDLabel:
+                        text: 'chat'
+                        halign: 'center'
+                    MDLabel:
+                        text: 'chat'
+                        halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'chat'
+            icon: 'chat'
+            badge_icon: root.badge_icon
+            on_tab_press: root.on_tab_press(*args)
+            font_name: "assets/font/SimHei.ttf"
+            MDLabel:
+                text: 'chat'
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'user'
+            icon: 'account'
+            on_tab_press: root.on_tab_press(*args)
+
+            MDLabel:
+                text: 'user'
+                halign: 'center'
